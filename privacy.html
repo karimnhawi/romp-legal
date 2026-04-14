@@ -11,6 +11,7 @@
     h1 { font-size: 1.75rem; margin-bottom: 0.25rem; color: #2c2c2c; }
     .updated { color: #888; font-size: 0.9rem; margin-bottom: 2rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; margin-bottom: 0.75rem; color: #2c2c2c; }
+    h3 { font-size: 1rem; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #2c2c2c; }
     p { margin-bottom: 1rem; }
     ul { margin-bottom: 1rem; padding-left: 1.5rem; }
     li { margin-bottom: 0.4rem; }
@@ -20,7 +21,7 @@
 <body>
   <div class="container">
     <h1>PupInsight Privacy Policy</h1>
-    <p class="updated">Last updated: April 2026</p>
+    <p class="updated">Last updated: April 13, 2026</p>
 
     <h2>1. Data We Collect</h2>
     <ul>
@@ -50,7 +51,15 @@
     <p>Your dog's health data, conversation messages, and uploaded images are sent to our AI provider's API to generate Hazel's responses. We may also use anonymized conversation data and health records to train and improve our own AI models, in order to provide better, more accurate insights for all users. Your data is never sold to third parties for their own model training. We may change AI providers; data sent to third-party AI providers is processed per-request and not retained by them beyond the immediate response.</p>
 
     <h2>4. Data Storage &amp; Retention</h2>
-    <p>Your data is stored securely on Supabase. All data is encrypted in transit (TLS) and at rest (AES-256). Row-level security ensures you can only access your own data. We retain your data for as long as your account is active and delete it when you delete your account.</p>
+    <p>Your data is stored securely on Supabase. All data is encrypted in transit (TLS) and at rest (AES-256). Row-level security ensures you can only access your own data.</p>
+    <h3>Active accounts</h3>
+    <p>We retain your data for as long as your account is active.</p>
+    <h3>Deleted accounts</h3>
+    <p>When you request account deletion, your account enters a <strong>30-day grace period</strong> during which you can cancel the deletion by signing back in. After 30 days, your personal data is permanently removed (see Section 7 for details on what is retained in anonymized form).</p>
+    <h3>Financial records</h3>
+    <p>Subscription and payment records are retained in anonymized form (with your user identifier removed) for up to <strong>7 years</strong> to comply with tax and accounting laws.</p>
+    <h3>Audit trail</h3>
+    <p>We maintain a cryptographically hashed record of deletion requests (no personal data) for up to 3 years to demonstrate compliance with data protection laws.</p>
 
     <h2>5. Data Sharing</h2>
     <p>We do NOT sell, rent, or share your personal data or your dog's health information with third parties for marketing purposes. Data is shared only with the following service providers, solely to operate PupInsight:</p>
@@ -71,7 +80,27 @@
     <p>You can revoke these permissions at any time in your device settings.</p>
 
     <h2>7. Data Export &amp; Deletion</h2>
-    <p>You can export all your data at any time from Profile &rarr; Account &rarr; Export Data. You can delete your account and all associated data at any time from Profile &rarr; Account &rarr; Delete Account. Upon deletion, all your data is permanently removed within 30 days.</p>
+    <h3>Export</h3>
+    <p>You can export all your data at any time from Profile &rarr; Account &rarr; Export Data.</p>
+    <h3>Delete (in-app)</h3>
+    <p>You can request deletion from Profile &rarr; Account &rarr; Delete Account. Deletion follows a 30-day grace period before your data is permanently removed. To cancel, sign back into the app within the grace period.</p>
+    <h3>Delete (web)</h3>
+    <p>You can also request account deletion from the web at <a href="/delete-account.html">pupinsight.com/delete-account</a> without installing the app.</p>
+    <h3>What is permanently deleted after 30 days</h3>
+    <ul>
+      <li>Your profile and dog profiles</li>
+      <li>All health records, vet visits, treatments, and uploaded documents</li>
+      <li>Chat conversations with Hazel and AI history</li>
+      <li>Notification preferences and push tokens (push tokens are deleted immediately)</li>
+      <li>Account and household memberships</li>
+    </ul>
+    <h3>What is anonymized and retained (no longer linked to you)</h3>
+    <ul>
+      <li>Bug reports and feature requests you submitted (content only, to improve the product)</li>
+      <li>Aggregated usage metrics (message counts, feature usage) for cost and capacity analysis</li>
+      <li>Financial transaction records for tax compliance (retained up to 7 years as required by law)</li>
+    </ul>
+    <p>Anonymized data is no longer considered personal data under GDPR, CCPA, PIPEDA, and similar laws because it cannot be linked back to you.</p>
 
     <h2>8. Push Notifications</h2>
     <p>We send push notifications for medication reminders, health check-ins, vaccination alerts, and pattern alerts. You can control which notification types you receive and set quiet hours in Profile &rarr; Notifications.</p>
@@ -80,13 +109,16 @@
     <p>Depending on your location, you may have the following rights:</p>
     <ul>
       <li>Right to access your data (available via Export)</li>
-      <li>Right to delete your data (available via Delete Account)</li>
+      <li>Right to delete your data (available via Delete Account; subject to the retention rules in Section 7)</li>
       <li>Right to correct your data (edit your dog's profile or health records anytime)</li>
       <li>Right to data portability (available via Export in JSON format)</li>
       <li>Right to opt out of non-essential data processing</li>
+      <li>Right to cancel a pending deletion (sign back in within 30 days)</li>
     </ul>
-    <p><strong>California residents (CCPA):</strong> You have the right to know what personal information we collect, request deletion, and opt out of the sale of personal information. We do not sell personal information.</p>
-    <p><strong>EU residents (GDPR):</strong> Our legal basis for processing is contract performance (providing the service you signed up for) and legitimate interest (improving the service via anonymized analytics).</p>
+    <p><strong>California residents (CCPA/CPRA):</strong> You have the right to know what personal information we collect, request deletion, correct inaccurate information, and opt out of the sale or sharing of personal information. We do not sell or share personal information. Retention of anonymized records is permitted under CCPA exceptions for transactions, security, and legal compliance.</p>
+    <p><strong>EU/EEA/UK residents (GDPR):</strong> Our legal bases for processing are (a) performance of the contract you entered into when creating an account, (b) legitimate interest in improving the service via anonymized analytics, and (c) legal obligation for financial record retention. Anonymized records are no longer personal data under GDPR Article 4 and are outside the scope of erasure rights.</p>
+    <p><strong>Canadian residents (PIPEDA):</strong> We destroy personal information when it is no longer needed for the purposes it was collected, subject to legal retention obligations.</p>
+    <p><strong>Brazilian residents (LGPD):</strong> You have rights equivalent to those under GDPR. Anonymized data is outside the scope of LGPD per Article 12.</p>
 
     <h2>10. Children's Privacy</h2>
     <p>PupInsight is not intended for use by children under 13. We do not knowingly collect data from children.</p>
